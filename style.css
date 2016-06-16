@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/**
+Theme Name:   	Doudou
+Theme URI:    	https://github.com/ymauray/doudou-theme
+Author:       	Yannick Mauray
+Author URI:	    https://frenchguy.ch
+Description:  	Un thème pour les doudous
+Version:      	0.0.1
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	doudou
+Template:       storefront
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*
+ * Rouge My-NANUQ : #e51639, rgb(229, 22, 57), hsl(350, 82%, 49%)
+ */
+
+#masthead {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+#masthead:before {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: #e51639;
+}
+
+#masthead > div {
+    padding: 0;
+    margin-top: 10px;
+}
+
+#masthead > div > nav {
+    width: auto;
+    margin: 0;
+    float: right;
+}
+
+#masthead .secondary-navigation .menu {
+    background-color: #e51639;
+}
+
+#masthead .secondary-navigation .menu a {
+    font-family: "Open Sans", sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 37px 10px 16px;
+}
+
+#masthead .secondary-navigation .menu li.fa::before {
+    color: #FFFFFF;
+    position: absolute;
+    font-size: 12px;
+    top: 0;
+    right: 0;
+    width: 13px;
+    padding: 10px 16px 10px 0;
+}
+
+@media (min-width: 768px) {
+    .secondary-navigation .menu>li>a:before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 25%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 37.5%;
+        left: -3px;
+    }
+
+    .woocommerce-active .site-header .site-search {
+        clear: both;
+    }
+}
+
