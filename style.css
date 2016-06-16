@@ -83,4 +83,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
         clear: both;
     }
 }
+.site-search {
+    margin-top: 10px;
+}
 
+.site-search form:before {
+    display: none;
+}
+
+.site-search .widget_product_search input[type=search] {
+    padding: 10px;
+}
+
+.site-search input[type=search] {
+    background-color: #FFFFFF;
+    border: 1px solid #e51639;
+    border-radius: 0;
+}
+
+.site-search input[type=search]:focus {
+    background-color: #FFFFFF;
+}
