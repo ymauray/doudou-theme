@@ -64,7 +64,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     top: 0;
     right: 0;
     width: 13px;
-    padding: 10px 16px 10px 0;
+    padding: 10px 10px 10px 0;
 }
 
 @media (min-width: 768px) {
@@ -95,12 +95,31 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 10px;
 }
 
-.site-search input[type=search] {
+.site-search .widget_product_search input[type=search] {
     background-color: #FFFFFF;
     border: 1px solid #e51639;
     border-radius: 0;
+    font-size: 12px;
+    line-height: normal;
 }
 
 .site-search input[type=search]:focus {
     background-color: #FFFFFF;
+}
+
+#masthead section.storefront-primary-navigation {
+    background-color: #FFFFFF;
+}
+
+#masthead nav#site-navigation {
+    width: 100%;
+}
+
+#masthead #site-navigation .primary-navigation {
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+#masthead #site-navigation .primary-navigation .menu-item a {
+    padding: 0;
 }
