@@ -20,6 +20,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Rouge My-NANUQ : #e51639, rgb(229, 22, 57), hsl(350, 82%, 49%)
  */
 
+body {
+    font-family: 'Open Sans', 'sans-serif';
+}
+
 #masthead {
     margin: 0;
     padding: 0;
@@ -31,6 +35,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     display: block;
     height: 10px;
     background-color: #e51639;
+    background-image: url('assets/fond_entetete.png');
 }
 
 #masthead > div {
@@ -68,7 +73,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 @media (min-width: 768px) {
-    .secondary-navigation .menu>li>a:before {
+    .secondary-navigation .menu > li > a:before {
         content: "";
         display: block;
         width: 1px;
@@ -80,9 +85,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
     }
 
     .woocommerce-active .site-header .site-search {
-        clear: both;
+        clear: right;
     }
 }
+
+@media (min-width: 768px) {
+    .site-header .custom-logo-link {
+        margin-bottom: 0;
+    }
+}
+
 .site-search {
     margin-top: 10px;
 }
@@ -125,11 +137,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .grey-bar {
-    height: 20px;
     background-color: #EEEEEE;
     clear: both;
-    border-top: 1px solid #B7B4B4;
-    border-bottom: 1px solid #B7B4B4;
+    border: 1px solid #B7B4B4;
+    /*border-bottom: 1px solid #B7B4B4;*/
+    background: url('assets/fond_entete.png');
+    /*
+    height: 50px;
+    background-size: 90px 85px;
+    background-position-y: -8px;
+    */
+    height: 40px;
+    background-size: 75px 70px;
+    background-position-y: -8px;
 }
 
 .colored-bar ul {
@@ -147,18 +167,143 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin: 10px;
 }
 
-.colored-bar .rouge {
+.colored-bar .rouge,
+.site-header ul.menu li:nth-child(1) > a,
+.site-header ul.menu li.current-menu-item:nth-child(1) > a,
+.site-header ul.menu li:nth-child(1):before {
     color: #E51693;
 }
 
-.colored-bar .bleu {
-    color: #449aba;
+.site-header ul.menu li:before {
+    margin-right: 5px;
 }
 
-.colored-bar .orange {
+.colored-bar .bleu,
+.site-header ul.menu li:nth-child(2) > a,
+.site-header ul.menu li.current-menu-item:nth-child(2) > a,
+.site-header ul.menu li:nth-child(2):before {
+    /* color: #449aba; */
     color: #F0822B;
 }
 
-.colored-bar .violet {
-    color: #96588A;
+.colored-bar .orange,
+.site-header ul.menu li:nth-child(3) > a,
+.site-header ul.menu li.current-menu-item:nth-child(3) > a,
+.site-header ul.menu li:nth-child(3):before {
+    /* color: #F0822B; */
+    color: #6CADDE;
+}
+
+.colored-bar .violet,
+.site-header ul.menu li:nth-child(4) > a,
+.site-header ul.menu li.current-menu-item:nth-child(4) > a,
+.site-header ul.menu li:nth-child(4):before {
+    /* color: #96588A; */
+    color: #3b5998;
+}
+
+#secondary {
+    background-color: #EEEEEE;
+}
+
+#secondary ul {
+    margin: 20px 0 0 20px;
+}
+
+#secondary li:before {
+    opacity: .50;
+}
+
+#secondary li > a {
+    text-decoration: none;
+}
+
+#secondary li.current-cat > a {
+    font-weight: 600;
+}
+
+#secondary li > a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.woocommerce-breadcrumb {
+    background-color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+    .woocommerce-breadcrumb {
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.wc-forward:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
+    outline: none;
+}
+
+#main .page-title,
+#main .entry-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.storefront-sorting {
+    background-color: #EEEEEE;
+}
+
+select, input[type=select] {
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 28px;
+    height: 28px;
+    color: #555555;
+    font-weight: 400;
+    margin: 0;
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+    .woocommerce-ordering {
+        float: right;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+.woocommerce-result-count {
+    display: none;
+}
+
+ul.products > li > a > img {
+    border: 1px solid;
+}
+
+.onsale {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    transform: rotate(-45deg);
+    background-color: #E51639;
+    color: #FFFFFF;
+    border: none;
+}
+
+#menu-petit-menu > li:before {
+    font-family: 'FontAwesome';
+}
+
+#menu-petit-menu > li {
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;
+}
+
+.fa {
+    font: normal normal normal 14px FontAwesome;
+}
+
+img {
+    border-radius: 0;
 }
